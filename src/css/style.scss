@@ -1,0 +1,116 @@
+@import 'reset';
+@import 'responsive';
+
+body{
+    max-width: 1280px;
+    margin: 0 auto;
+
+    main:after{
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);    
+        z-index: -1;
+    }
+
+    main{
+        .carousel{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+    
+            .img-carousel{
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+                display: none;
+                animation: changeImage 0.7s;
+            }
+    
+            .active{
+                display: block;
+            }
+        }
+    
+        .container{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+    
+            .infos{
+    
+                .logo{
+                    max-width: 320px;
+                    margin-bottom: 80px;
+                    // filter: invert(1);
+                }
+    
+                .desc{
+                    width: 45%;
+                    line-height: 30px;
+                    font-size: 24px;
+                    color: #fff;
+                }
+            }
+    
+            .btn-carousel{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                
+                .btn{
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    cursor: pointer;
+                    background-color: #fff;
+                }
+    
+                .btn-selected{
+                    background-color: #1d8346;
+                }
+            }
+        }
+    
+        .midias{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+    
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+    
+                .icon{
+                    width: 30px;
+                    filter: invert(1);
+                    transition: 0.3s ease-in-out;
+                }
+                .icon:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+@keyframes changeImage{
+    from{
+        opacity: 0.85;
+    } to{
+        opacity: 1;
+    }
+}

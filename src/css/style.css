@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+@media (max-width: 1280px) {
+  body {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .infos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .infos .desc {
+    width: 60%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    padding: 40px;
+  }
+  .container {
+    min-height: 75vh;
+    gap: 50px;
+  }
+  .container .infos .logo {
+    max-width: 300px;
+  }
+  .container .infos .desc {
+    width: 100%;
+  }
+  .midias {
+    position: static;
+    min-height: auto;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .midias ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+body main:after {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, black), color-stop(50%, rgba(0, 0, 0, 0.0592612)), color-stop(90%, black));
+  background: linear-gradient(90deg, black 10%, rgba(0, 0, 0, 0.0592612) 50%, black 90%);
+  z-index: -1;
+}
+
+body main .carousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+body main .carousel .img-carousel {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+  -webkit-animation: changeImage 0.7s;
+          animation: changeImage 0.7s;
+}
+
+body main .carousel .active {
+  display: block;
+}
+
+body main .container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main .container .infos .logo {
+  max-width: 320px;
+  margin-bottom: 80px;
+}
+
+body main .container .infos .desc {
+  width: 45%;
+  line-height: 30px;
+  font-size: 24px;
+  color: #fff;
+}
+
+body main .container .btn-carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+body main .container .btn-carousel .btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+body main .container .btn-carousel .btn-selected {
+  background-color: #1d8346;
+}
+
+body main .midias {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+body main .midias ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+body main .midias ul .icon {
+  width: 30px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body main .midias ul .icon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@-webkit-keyframes changeImage {
+  from {
+    opacity: 0.85;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes changeImage {
+  from {
+    opacity: 0.85;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
